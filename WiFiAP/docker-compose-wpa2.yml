@@ -1,6 +1,6 @@
 version: '3.7'
 services:
-  autowlan:
+  wifiap:
     container_name: wifiap_wpa2
     build: .
     image: wifiap
