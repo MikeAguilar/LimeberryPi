@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  autowlan:
+    container_name: wifiap_wep
+    build: .
+    image: wifiap
+    cap_add:
+      - NET_ADMIN
+    stop_grace_period: 2m
+    network_mode: "host"
+    volumes:
+      - ./appconfig/hostapd_conf_files/hostapd_wep.conf:/etc/hostapd/hostapd.conf
+
