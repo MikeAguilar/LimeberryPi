@@ -1,10 +1,11 @@
-FROM arm32v6/alpine
+# Start with Alpine OS as the base image
+FROM alpine
 
 # Install packages
 RUN apk update && apk add hostapd iw dhcp vim iptables
 
-# Configure Hostapd (OPEN as Default below)
-ADD appconfig/hostapd_conf_files/hostapd_wpa2.conf /etc/hostapd/hostapd.conf
+# Configure Hostapd (WiFi Access Point OPEN by default)
+ADD appconfig/hostapd_conf_files/hostapd_open.conf /etc/hostapd/hostapd.conf
 
 # Configure DHCPD
 ADD appconfig/dhcpd.conf /etc/dhcp/dhcpd.conf
