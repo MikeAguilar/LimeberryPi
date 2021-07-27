@@ -2,6 +2,8 @@
 Network and other tools for the Raspberry Pi
 
 ## Deploying and Running WiFiAP (WiFi Access Point)
+##### Note that this Docker Image does **_NOT_** work with **_Raspbian OS_**. 
+##### It has currently only been tested on Ubuntu Server 20.04 LTS with Raspberry Pi 3b+ and Pi 4
 
 ## Prepare your Pi:
 
