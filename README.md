@@ -25,7 +25,7 @@ net.ipv4.ip_forward=1
 
 ## Disable dhcpd for wlan0
 
-Avoid issues with  dhcpd service, add the following line into the file /etc/dhcpcd.conf, making the service ignore the wireless interfaces wlan0 (but still manage wlan0):
+Avoid issues with  dhcpd service, add the following line into the file `/etc/dhcpcd.conf`, making the service ignore the wireless interfaces wlan0 (but still manage wlan0):
 
 `denyinterfaces wlan0`
 
