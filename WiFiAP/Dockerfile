@@ -1,8 +1,9 @@
 # Start with Alpine OS as the base image
-FROM alpine
+FROM alpine:3.14
 
 # Install packages
-RUN apk update && apk add hostapd iw dhcp vim iptables
+RUN echo -e "http://nl.alpinelinux.org/alpine/v3.14/main\nhttp://nl.alpinelinux.org/alpine/v3.14/community" > /etc/apk/repositories
+RUN apk update && apk add hostapd iw dhcp vim iptables tcpdump
 
 # Configure Hostapd (WiFi Access Point OPEN by default)
 ADD appconfig/hostapd_conf_files/hostapd_open.conf /etc/hostapd/hostapd.conf
